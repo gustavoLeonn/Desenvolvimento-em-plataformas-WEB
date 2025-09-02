@@ -1,0 +1,36 @@
+ #art1 {
+            background-color: rgb(19, 100, 230);
+            padding: 20px;
+            font-size: 18px;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        #art2 {
+            background-color: rgb(19, 100, 230);
+            padding: 20px;
+            font-size: 18px;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        #art3 {
+            background-color: rgb(19, 100, 230);
+            padding: 20px;
+            font-size: 18px;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        [id="ID"]{
+            background-color: rgb(70, 11, 104);
+        }
+
+        article p:hover{
+            background-color: aquamarine;
+            color: black;
+        }
+
+        article p::before{
+            content: "🔥"
+        }
