@@ -1,4 +1,12 @@
- #art1 {
+body {
+      background-image: url("jeri.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+        #art1 {
             background-color: rgb(19, 100, 230);
             padding: 20px;
             font-size: 18px;
@@ -23,7 +31,7 @@
         }
 
         [id="ID"]{
-            background-color: rgb(70, 11, 104);
+            background-color: rgb(92, 70, 153);
         }
 
         article p:hover{
@@ -33,4 +41,32 @@
 
         article p::before{
             content: "🔥"
+        }
+
+        div p {
+            color: aliceblue;
+        }
+
+        div h3 {
+            color: black;
+        }
+
+        div > p {
+            color: black;
+        }
+
+        h1 + p {
+            color: rgb(0, 0, 0);
+         }
+
+         h3 + p {
+            color: rgb(0, 0, 0);
+         }
+
+         h1 ~ p {
+             color: rgb(0, 0, 0);
+        }
+
+        h3 ~ p {
+             color: rgb(0, 0, 0);
         }
