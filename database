@@ -1,0 +1,46 @@
+CREATE DATABASE EXERCICIO;
+
+USE EXERCICIO;
+
+CREATE TABLE ZOO(
+nome varchar(100),
+area float,
+funcionarios int,
+ingresso float
+);
+
+CREATE TABLE ANIMAL(
+id int primary key,
+especie varchar(100),
+nome varchar(100),
+peso float,
+idade int,
+altura float
+);
+
+CREATE TABLE FUNCIONARIO(
+id int primary key,
+nome varchar(100),
+telefone varchar(100),
+email varchar(100)
+);
+
+INSERT INTO FUNCIONARIO (id, nome, telefone, email) VALUES
+(00, "Roberto", "85988476955", "roberto123@gmail.com"),
+(01, "Rosane", "85912345678", "rosane123@gmail.com"),
+(02, "Claudio", "85912435687", "claudio123@gmail.com");
+;
+
+INSERT INTO ANIMAL (id, especie, nome, peso, idade, altura) VALUES
+(000, "Tigre", "Valentina", 200, 10, 1.50),
+(001, "Lobo", "Walter", 100, 8, 1.20),
+(002, "Girafa", "Luna", 130, 12, 3.20);
+
+
+SELECT * FROM ANIMAL;
+SELECT nome, idade FROM ANIMAL WHERE idade > 8;
+
+ALTER TABLE FUNCIONARIO ADD COLUMN idade int;
+UPDATE FUNCIONARIO SET idade = 31 WHERE id = 00;
+UPDATE FUNCIONARIO SET idade = 32 WHERE id = 01;
+UPDATE FUNCIONARIO SET idade = 35 WHERE id = 02;
