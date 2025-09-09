@@ -1,4 +1,5 @@
 body {
+      position: absolute;
       background-image: url("jeri.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
@@ -31,7 +32,7 @@ body {
         }
 
         [id="ID"]{
-            background-color: rgb(92, 70, 153);
+            background-color: rgb(255, 255, 255);
         }
 
         article p:hover{
@@ -70,3 +71,35 @@ body {
         h3 ~ p {
              color: rgb(0, 0, 0);
         }
+
+        nav ul{
+            left: 420px;
+            padding: 5px;
+            position: fixed;
+            background-color: white;
+            margin:20px;
+            left: 420px;
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        span {
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        .block div {
+      background-color: lightgreen;
+      width: 200px;
+      height: 50px;
+      margin-bottom: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
