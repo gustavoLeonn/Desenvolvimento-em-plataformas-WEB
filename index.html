@@ -21,6 +21,24 @@
             font-size: 18px;
         }
 
+        .div1 {
+            padding: 10px;
+            margin: 40px;
+            border: 4px dashed #dedee4;
+            position:relative;
+        }
+
+        .div2 {
+            padding: 40px;
+            border: 4px dashed #dedee4;
+            position:sticky;
+        }
+
+        .div3{
+            padding: 40px;
+            border: 4px dashed #dedee4;
+            position:static;
+        }
 
     </style>
 
@@ -38,39 +56,54 @@
         roteiros, gastronomia e tudo o que precisa para viver experiências
         inesquecíveis no paraíso cearense.
     </p>
-    <nav>
+    
+    <nav class="navegacao">
         <ul>
           <li><a href="#art1">LITORAL LESTE</a></li>
           <li><a href="#art2">LITORAL OESTE</a></li>
           <li><a href="#art3">CAPITAL</a></li>
         </ul>
-      </nav>
+    </nav>
 
-      <section div class="litorais">
-        <article id = "art1"> 
-            <h3 style="color:black">LITORAL LESTE</h3>
-            <p style="color:black"> Jericoacoara </p>   <!-- conflito 1 -->
-            <p> Flecheiras </p>
-            <p> Paracuru </p>
-          </article>
-    
-          <article id = "art2"> 
-            <h3 style="color:black">LITORAL OESTE</h3>
-            <p style="color:black"> Caponga </p>  <!-- conflito 2 -->
-            <p> Pontal do Maceió </p>
-            <p> Beberibe </p>
-          </article>
-    
-          <article id = "art3"> 
-            <h3 style="color:black">CAPITAL</h3>
-            <p style="color:black"> Praia do Futuro </p>  <!-- conflito 3 -->
-            <p> Beira mar </p>
-            <p> Porto Das Dunas </p>
-          </article>
+      <div class="litorais">
+
+        <div class="div1">
+            <article id = "art1"> 
+                <h3 style="color:black">LITORAL LESTE</h3>
+                <p style="color:black"> Jericoacoara </p>   <!-- conflito 1 -->
+                <p> Flecheiras </p>
+                <p> Paracuru </p>
+            </article>
+        </div>
+
+        <div class="block">
+        <div class="div2">
+            <article id = "art2"> 
+                <h3 style="color:black">LITORAL OESTE</h3>
+                <p style="color:black"> Caponga </p>  <!-- conflito 2 -->
+                <p> Pontal do Maceió </p>
+                <p> Beberibe </p>
+            </article>
+        </div>
+
+        <div class="div3"> 
+            <article id = "art3"> 
+                <h3 style="color:black">CAPITAL</h3>
+                <p style="color:black"> Praia do Futuro </p>  <!-- conflito 3 -->
+                <p> Beira mar </p>
+                <p> Porto Das Dunas </p>
+            </article> 
+        </div>
+        </div>
+
       </section>
-      <div>
-      <p>ESTAS SÃO AS PRINCIPAIS PRAIAS MAIS VISITADAS DO LITORAL CEARENSE </p>
-      <p>ENCONTRE A QUE MAIS COMBINE COM VOCÊ!</p>
-      </div>
+      
     </body>
+    <footer>
+            <div class="inline">
+                <span>ESTAS SÃO AS PRINCIPAIS PRAIAS MAIS VISITADAS DO LITORAL CEARENSE </span>
+                <span>ENCONTRE A QUE MAIS COMBINE COM VOCÊ!</span>
+            </div>
+        <p>&copy; 2023 Litoral Cearense. Todos os direitos reservados.</p>
+    </footer>
 </html>
