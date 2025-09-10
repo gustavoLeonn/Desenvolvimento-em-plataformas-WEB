@@ -1,0 +1,107 @@
+/* 11. CSS Externo e Gradiente de fundo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: #333;
+    margin: 0;
+    padding: 0 20px 60px 20px; /* espaço para rodapé fixo */
+}
+
+/* 12. Estilizando parágrafo */
+.paragrafo {
+    color: blue;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* 13. Classe de botão */
+.botao {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.botao:hover {
+    background-color: green;
+}
+
+/* 14. Layout com Flexbox */
+.container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+.caixa {
+    background-color: #f2f2f2;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* 15. Card estilizado */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 20px 0;
+}
+
+/* 16. Tabela estilizada */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #333;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #007bff;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* 17. Menu de navegação horizontal */
+.menu {
+    display: flex;
+    gap: 20px;
+    background-color: #333;
+    padding: 10px;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+.menu a:hover {
+    color: yellow;
+}
+
+/* 18. Layout responsivo com media queries */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* 19. Rodapé fixado */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
