@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Busca de Livros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #resultado {
+      margin-top: 20px;
+    }
+    .livro {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>📚 Busca de Livros</h2>
+
+  <input type="text" id="termo" placeholder="Digite o título ou autor">
+  <button id="buscar">Buscar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById("buscar").addEventListener("click", async () => {
+      const termo = document.getElementById("termo").value.trim();
+      const resultadoDiv = document.getElementById("resultado");
+      resultadoDiv.innerHTML = ""; // limpa os resultados anteriores
+
+      if (!termo) {
+        alert("Digite um termo de busca!");
+        return;
+      }
+
+      try {
+        const resposta = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(termo)}`);
+
+        if (!resposta.ok) throw new Error("Erro na requisição");
+
+        const dados = await resposta.json();
+
+        if (!dados.items || dados.items.length === 0) {
+          resultadoDiv.innerHTML = "<p>Nenhum livro encontrado.</p>";
+          return;
+        }
+
+        dados.items.forEach(livro => {
+          const info = livro.volumeInfo;
+          resultadoDiv.innerHTML += `
+            <div class="livro">
+              <h3>${info.title || "Sem título"}</h3>
+              <p><strong>Autor(es):</strong> ${info.authors ? info.authors.join(", ") : "Desconhecido"}</p>
+              <p><strong>Publicado em:</strong> ${info.publishedDate || "Não informado"}</p>
+            </div>
+          `;
+        });
+
+      } catch (erro) {
+        console.error("Erro:", erro);
+        resultadoDiv.innerHTML = "<p>Ocorreu um erro ao buscar os livros.</p>";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
